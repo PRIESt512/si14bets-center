@@ -5,7 +5,6 @@ import org.jetbrains.annotations.NotNull;
 import ru.si14bet.hazelcast.model.events.Match;
 import ru.si14bet.hazelcast.model.events.MatchStatusType;
 
-
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -19,12 +18,12 @@ public class EventBook implements Serializable, Comparable<EventBook> {
 
     /**
      * Для сортировки в кеше (помогает для формирования фаворитов и прочее)
-     * @param o
+     * @param other
      * @return
      */
     @Override
-    public int compareTo(@NotNull EventBook o) {
-        return startTime.compareTo(o.getStartTime());
+    public int compareTo(@NotNull EventBook other) {
+        return startTime.compareTo(other.getStartTime());
     }
 //
 //    public static void main(String[] args) {

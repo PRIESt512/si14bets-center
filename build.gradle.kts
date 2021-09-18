@@ -6,6 +6,7 @@ plugins {
     id("org.springframework.boot") version "2.5.4"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("com.vaadin") version "0.14.6.0"
+    id ("io.freefair.lombok") version "6.2.0"
     id("java")
     kotlin("jvm") version "1.5.30"
     kotlin("plugin.spring") version "1.5.30"
@@ -13,8 +14,8 @@ plugins {
 
 defaultTasks("clean", "build")
 
-java.sourceCompatibility = JavaVersion.VERSION_17
-java.targetCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.VERSION_16
+java.targetCompatibility = JavaVersion.VERSION_16
 
 group = "ru.si14.bets.center"
 version = "1.0-SNAPSHOT"
@@ -59,7 +60,6 @@ dependencies {
 
     implementation("com.hazelcast:hazelcast:${Versions.hazelcastVersion}")
 
-    compileOnly ("org.projectlombok:lombok:${Versions.lombooVersion}")
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
