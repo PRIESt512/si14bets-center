@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    org:
+      atmosphere: WARN
+
+vaadin:
+  compatibilityMode: false
+  pnpm-enabled: true
